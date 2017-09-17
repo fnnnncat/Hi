@@ -9,7 +9,18 @@ import {
   Switch,
   Link,
 } from 'react-router-dom'
-import './index.css'
+import {
+  AppBar,
+  Button,
+  IconButton,
+  Toolbar,
+  Typography,
+} from 'material-ui'
+import {
+  Menu as MenuIcon,
+} from 'material-ui-icons'
+
+import './styles/base.css'
 // import serviceWorker from './serviceWorker'
 import store from './store'
 
@@ -78,11 +89,24 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <Router>
-          <div>
+          <div className="app-root">
             {this.renderDevTools()}
-            <Link to="/">Home</Link>
-            <br />
-            <Link to="/about">About</Link>
+            <AppBar position="static">
+              <Toolbar>
+                <IconButton className="menu-button" color="contrast" aria-label="Menu">
+                  <MenuIcon />
+                </IconButton>
+                <Typography type="title" color="inherit" className="flex">
+                  Title
+                </Typography>
+                <Button color="contrast">
+                  <Link to="/">Home</Link>
+                </Button>
+                <Button color="contrast">
+                  <Link to="/about">About</Link>
+                </Button>
+              </Toolbar>
+            </AppBar>
             <Switch>
               <Route exact path="/" component={Home}/>
               <Route path="/about" component={About}/>

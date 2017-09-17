@@ -7,6 +7,8 @@
     "koa": "^2.3.0",
     "koa-json": "^2.0.2",
     "koa-router": "^7.2.1",
+    "material-ui": "^1.0.0-beta.10",
+    "material-ui-icons": "^1.0.0-beta.10",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.1",
     "react": "^15.6.1",
@@ -15,7 +17,7 @@
     "react-scripts": "1.0.13"
   },
   "scripts": {
-    "start-server": "supervisor app.js",
+    "start-server": "supervisor -w app/ app.js",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",

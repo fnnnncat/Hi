@@ -1,5 +1,7 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
+.app-root {
+  margin-top: 4px;
+  width: 100%;
+  flex-flex: 1; }
+  .app-root .menu-button {
+    margin-left: -12px;
+    margin-right: 20px; }

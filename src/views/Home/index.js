@@ -10,6 +10,9 @@ import {
 import {
   getTest,
 } from '../../request/global'
+import {
+  Button,
+} from 'material-ui'
 
 class Home extends React.Component {
   async componentDidMount() {
@@ -30,7 +33,13 @@ class Home extends React.Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <button onClick={() => pushCount(count+1)}>click times: {count}</button>
+        <Button
+          raised
+          color="default"
+          onClick={() => pushCount(count+1)}
+        >
+          click times: {count}
+        </Button>
       </div>
     )
   }
