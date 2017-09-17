@@ -1,7 +1,6 @@
 {
   "globals": {
-    "Logger": true,
-    "it": true
+    "Logger": true
   },
   "extends": [
     "eslint:recommended",

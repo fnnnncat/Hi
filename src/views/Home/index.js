@@ -6,9 +6,18 @@ import logo from './logo.svg'
 import './index.css'
 import {
   pushCount,
-} from '../../actions/global.js'
+} from '../../actions/global'
+import {
+  getTest,
+} from '../../request/global'
 
 class Home extends React.Component {
+  async componentDidMount() {
+    const k = await getTest()
+
+    console.log(k)
+  }
+
   render() {
     const count = this.props.global.count
 
@@ -30,4 +39,3 @@ class Home extends React.Component {
 export default connect(state => ({
   global: state.global,
 }))(Home)
-
